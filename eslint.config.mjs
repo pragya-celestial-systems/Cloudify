@@ -14,7 +14,7 @@ export default [
     rules: {
       indent: ['error', 2],
       eqeqeq: 'error',
-      'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+      'no-console': 'warn',
       'no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true }],
       quotes: ['error', 'single', { avoidEscape: true }],
       'comma-dangle': ['error', 'always-multiline'],
