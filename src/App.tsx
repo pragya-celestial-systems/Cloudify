@@ -3,6 +3,7 @@ import { useAppContext } from './context/App';
 import { makeStyles } from '@mui/styles';
 import WeatherBox from './components/WeatherBox';
 import Header from './components/Header';
+import Cities from './components/Cities';
 
 const useStyles = makeStyles({
   content: {
@@ -60,7 +61,9 @@ function App() {
           <div className={classes.leftBox}>
             <WeatherBox />
           </div>
-          <div className={classes.rightBox}></div>
+          <div className={classes.rightBox}>
+            <Cities />
+          </div>
         </div>
       </main>
     </div>
