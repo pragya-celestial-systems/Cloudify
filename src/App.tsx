@@ -1,42 +1,61 @@
 import React from 'react';
-import InputField from './components/InputField';
-import { AppContextProvider } from './context/App';
+import { useAppContext } from './context/App';
 import { makeStyles } from '@mui/styles';
 import WeatherBox from './components/WeatherBox';
+import Header from './components/Header';
 
 const useStyles = makeStyles({
-  container: {
-    width: '80vw',
-    margin: 'auto',
+  content: {
+    height: '100svh',
+    width: '100svw',
   },
-  heading: {
-    textAlign: 'center',
-    margin: '2rem',
-    color: 'white',
+  container: {
+    width: '90vw',
+    margin: 'auto',
   },
   boxContainer: {
     display: 'flex',
-    marginTop: '3rem',
+    height: '85vh',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
   },
   leftBox: {
-    width: '65%',
+    width: '50%',
     height: '100%',
     backdropFilter: 'blur(6px)',
     background: '#4747475',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   rightBox: {
-    width: '35%',
+    width: '30%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
 function App() {
   const classes = useStyles();
+  const { data } = useAppContext();
+  const dayWeather =
+    'https://cdn.pixabay.com/photo/2023/06/03/11/46/sky-8037515_1280.jpg';
+  const nightWeather =
+    'https://c1.wallpaperflare.com/preview/748/977/304/storm-sky-cloudy-weather.jpg';
+
+  const backgroundImage = data?.is_day === 'yes' ? dayWeather : nightWeather;
 
   return (
-    <AppContextProvider>
+    <div className={classes.content} style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }}>
       <main className={classes.container}>
-        <h1 className={classes.heading}>Cloudify</h1>
-        <InputField />
+        <Header />
         <div className={classes.boxContainer}>
           <div className={classes.leftBox}>
             <WeatherBox />
@@ -44,7 +63,7 @@ function App() {
           <div className={classes.rightBox}></div>
         </div>
       </main>
-    </AppContextProvider>
+    </div>
   );
 }
 

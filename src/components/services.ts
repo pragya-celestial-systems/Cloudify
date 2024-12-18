@@ -6,6 +6,8 @@ export default async function fetchData(query: string) {
       `${process.env.REACT_APP_BASE_URL}?access_key=${process.env.REACT_APP_API_KEY}&query=${query}`,
     );
 
+    console.log(data);
+
     if (data.error) {
       return { status: 404, message: 'Invalid city name' };
     }
@@ -19,13 +21,14 @@ export default async function fetchData(query: string) {
       pressure: current.pressure,
       temperature: current.temperature,
       visibility: current.visibility,
-      weather_descriptions: current.weather_descriptions,
+      weather_description: current.weather_descriptions[0],
       wind_dir: current.wind_dir,
       wind_speed: current.wind_speed,
       country: location.country,
       localtime: location.localtime,
       city: location.name,
       state: location.region,
+      timezone: location.timezone_id,
     };
 
     return { status: 200, data: weatherData };
