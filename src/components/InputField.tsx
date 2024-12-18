@@ -3,7 +3,7 @@ import { Button, FormControl, InputAdornment, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { toast, ToastContainer } from 'react-toastify';
 import { useAppContext } from '../context/App';
-import axios from 'axios';
+import fetchData from './services';
 
 function InputField() {
   const [query, setQuery] = useState<string>('');
@@ -20,33 +20,37 @@ function InputField() {
     }
 
     const city = query.toLowerCase().trim();
-    fetchData(city);
+    getData(city);
     setQuery('');
   }
 
-  async function fetchData(query: string) {
-    try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}?access_key=${process.env.REACT_APP_API_KEY}&query=${query}`,
-      );
+  async function getData(city:string) {
+    const response = await fetchData(city);
 
-      if (!response.data.sucess) {
-        throw new Error();
-      }
-
-      setData(response.data);
-    } catch (error) {
-      console.log(error);
-      toast.error('Invalid city');
+    if(response?.status !== 200){
+      toast.error(response?.message);
+      return;
     }
+
+    const { data = {} } = response;
+    setData(data);
   }
 
   return (
     <>
-      <FormControl>
+      <FormControl 
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+        }}>
         <TextField
           variant="outlined"
           value={query}
+          sx={{
+            background: 'white',
+            borderRadius: '5px',
+          }}
           onChange={handleChange}
           placeholder="Search city..."
           InputProps={{
