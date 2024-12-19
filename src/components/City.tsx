@@ -1,5 +1,6 @@
-import { Box, Typography } from '@mui/material';
 import React from 'react';
+import { Typography } from '@mui/material';
+import './css/city.css';
 
 interface CityProps {
   city: {
@@ -10,8 +11,8 @@ interface CityProps {
 
 export default function City({ city }: CityProps) {
   return (
-    <Box sx={{ padding: 1, border: '1px solid #ccc', borderRadius: 2, textAlign: 'center', minWidth: 100 }}>
+    <div className='city-name'>
       <Typography variant="h6">{city.name}</Typography>
-    </Box>
+    </div>
   );
 }

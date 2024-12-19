@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import City from './City';
+import './css/cities.css';
 
 const cities = [
   { id: 1, name: 'Noida' },
@@ -14,10 +14,10 @@ const cities = [
 
 export default function Cities() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, p: 2 }}>
+    <div id='citiesContainer'>
       {cities.map((city) => (
         <City key={city.id} city={city} />
       ))}
-    </Box>
+    </div>
   );
 }

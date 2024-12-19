@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { toast, ToastContainer } from 'react-toastify';
 import { useAppContext } from '../context/App';
 import fetchData from './services';
+import './css/input.field.css';
 
 function InputField() {
   const [query, setQuery] = useState<string>('');
@@ -39,20 +40,13 @@ function InputField() {
 
   return (
     <>
-      <form 
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'flex-end',
-          width: '70%',
-          margin: 'auto',
-          alignItems: 'center',
-          background: 'transparent',
-        }}
+      <form
+        id="form"
         onSubmit={handleSearchCity}>
         <TextField
           variant="outlined"
           value={query}
+          id="textField"
           sx={{
             background: '#ffffff50',
             color: 'white',
@@ -70,12 +64,7 @@ function InputField() {
             ),
           }}
         />
-        <Button variant="contained" onClick={handleSearchCity} sx={{
-          marginLeft: '5px',
-          height: '50px',
-          fontSize:'1.1rem',
-          background: '#b30000',
-        }}>
+        <Button variant="contained" onClick={handleSearchCity} id="searchBtn">
           Search
         </Button>
       </form>

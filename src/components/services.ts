@@ -6,8 +6,6 @@ export default async function fetchData(query: string) {
       `${process.env.REACT_APP_BASE_URL}?access_key=${process.env.REACT_APP_API_KEY}&query=${query}`,
     );
 
-    console.log(data);
-
     if (data.error) {
       return { status: 404, message: 'Invalid city name' };
     }
