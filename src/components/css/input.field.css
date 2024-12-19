@@ -1,0 +1,24 @@
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 70%;
+  margin: auto;
+  align-items: center;
+  background: transparent;
+}
+
+#textField {
+    color: black;
+    border-radius: 5px;
+    width: 50%;
+    padding: 0;
+    padding: 1rem;
+}
+
+#searchBtn {
+    margin-left: 5px;
+    height: 50px;
+    font-size: 1.1rem;
+    background: #b30000;
+}

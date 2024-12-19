@@ -1,0 +1,11 @@
+.cloudIcon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 8px;
+}
+
+#logo {
+    flex-grow: 1;
+    color: whitesmoke;
+    font-weight: 800;
+}
