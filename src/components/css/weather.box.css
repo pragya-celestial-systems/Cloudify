@@ -30,15 +30,22 @@
 .bottomBox {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   width: 100%;
 }
 
 .box {
   display: flex;
-  width: 25%;
+  min-width: 150px;
   min-height: 60px;
   min-height: 50px;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
   margin: 0.3rem 0.5rem;
   background-color: #f5f5f536;
+}
+
+.icon {
+  margin-right: 8px;
 }

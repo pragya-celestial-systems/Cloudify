@@ -1,8 +1,10 @@
 #citiesContainer {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    width: 100%;
-    height: 65vh;
-    overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  width: 100%;
+  height: 65vh;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
 }

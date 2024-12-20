@@ -125,7 +125,7 @@ export default function WeatherBox() {
           <div className="bottomBox">
             <div className="box">
               <div>
-                <CompressIcon />
+                <CompressIcon className="icon" />
               </div>
               <div>
                 <b>Pressure:</b> {data.pressure}
@@ -133,7 +133,7 @@ export default function WeatherBox() {
             </div>
             <div className="box">
               <div>
-                <VisibilityIcon />
+                <VisibilityIcon className="icon" />
               </div>
               <div>
                 <b>Visibility:</b> {data.visibility}
@@ -141,7 +141,7 @@ export default function WeatherBox() {
             </div>
             <div className="box">
               <div>
-                <AccessTimeIcon />
+                <AccessTimeIcon className="icon" />
               </div>
               <div>
                 <b>Time Zone:</b> {data.timezone}
@@ -149,7 +149,7 @@ export default function WeatherBox() {
             </div>
             <div className="box">
               <div>
-                <DirectionsIcon />
+                <DirectionsIcon className="icon" />
               </div>
               <div>
                 <b>Wind Dir:</b> {data.wind_dir}
@@ -159,7 +159,7 @@ export default function WeatherBox() {
           <div className="bottomBox">
             <div className="box">
               <div>
-                <AirIcon />
+                <AirIcon className="icon" />
               </div>
               <div>
                 <b>Wind Speed:</b> {data.wind_speed}km/hour
@@ -167,7 +167,7 @@ export default function WeatherBox() {
             </div>
             <div className="box">
               <div>
-                <LightModeIcon />
+                <LightModeIcon className="icon" />
               </div>
               <div>
                 <b>Day:</b> {data.is_day}
@@ -175,7 +175,7 @@ export default function WeatherBox() {
             </div>
             <div className="box">
               <div>
-                <SentimentSatisfiedIcon />
+                <SentimentSatisfiedIcon className="icon" />
               </div>
               <div>
                 <b>Feels Like:</b> {data.feelslike}&deg;C
@@ -183,7 +183,7 @@ export default function WeatherBox() {
             </div>
             <div className="box">
               <div>
-                <WaterDropIcon />
+                <WaterDropIcon className="icon" />
               </div>
               <div>
                 <b>Humidity:</b> {data.humidity}&deg;

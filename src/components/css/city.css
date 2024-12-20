@@ -1,16 +1,18 @@
-.city-name {
+.city-name-container {
   padding: 1rem;
   text-align: center;
-  min-width: 100px;
-  max-width: 200px;
-  cursor: pointer;
-  background-color: #ffffff;
+  width: 200px;
+  background-color: #ffffff78;
   margin: 0.5rem;
   color: black;
 }
 
-.city-name:hover {
-  background-color: whitesmoke;
+.city-name-container:hover {
+  background-color: rgba(245, 245, 245, 0.681);
   transition: 0.3s;
   border-color: whitesmoke;
+}
+
+.city-name {
+  cursor: pointer;
 }

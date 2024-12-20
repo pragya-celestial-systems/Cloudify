@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default async function fetchData(query: string) {
+export default async function fetchData(query: string = 'Noida') {
   try {
     const { data } = await axios.get(
       `${process.env.REACT_APP_BASE_URL}?access_key=${process.env.REACT_APP_API_KEY}&query=${query}`,
