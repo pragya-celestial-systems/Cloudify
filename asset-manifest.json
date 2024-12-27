@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Cloudify/static/css/main.b9784e67.css",
+    "main.js": "/Cloudify/static/js/main.85ac43e5.js",
+    "index.html": "/Cloudify/index.html",
+    "main.b9784e67.css.map": "/Cloudify/static/css/main.b9784e67.css.map",
+    "main.85ac43e5.js.map": "/Cloudify/static/js/main.85ac43e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9784e67.css",
+    "static/js/main.85ac43e5.js"
+  ]
+}
