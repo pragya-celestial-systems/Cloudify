@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Cloudify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cloudify is a React and TypeScript-based weather application that provides real-time weather data for cities around the world. The app uses the OpenWeather API to fetch and display weather information. The background image is dynamic.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search Functionality:**
+  Users can search for a city by typing its name. On pressing enter, the weather data for the entered city is displayed.
 
-### `npm start`
+- **Predefined City Buttons:**
+  Some buttons for predefined cities are provided on the right-hand side of the interface. Clicking on these buttons fetches and displays weather data for the respective city.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Dynamic Backgrounds:**
+  - Displays a night-themed background if it is nighttime in the selected city.
+  - Displays a day-themed background if it is daytime in the selected city.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**
+- **TypeScript**
+- **OpenWeather API**
+- **CSS**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/pragya-celestial-systems/cloudify.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd cloudify
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. **Create an `.env` File:**
+   Add your OpenWeather API key in a `.env` file at the root of your project:
+   ```plaintext
+   REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. **Run the Application:**
+   ```bash
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Access the Application:**
+   Open your browser and navigate to `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Search for a City:**
+   - Enter the name of the city in the search bar and press `Enter`.
+   - The weather details of the city will be displayed.
 
-## Learn More
+2. **Use Predefined Buttons:**
+   - Click on any of the predefined city buttons to quickly view weather data for that city.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Observe Background Changes:**
+   - The background will change dynamically based on the time of day (day/night) in the selected city.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Integration
+
+Cloudify uses the [OpenWeather API](https://openweathermap.org/api) to fetch weather data. Ensure you have a valid API key to use this application.
+
